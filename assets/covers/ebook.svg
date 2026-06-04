@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b"/>
+      <stop offset="50%" style="stop-color:#065f46"/>
+      <stop offset="100%" style="stop-color:#047857"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff" stop-opacity="0.1"/>
+      <stop offset="100%" style="stop-color:#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <circle cx="550" cy="100" r="180" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="50"/>
+  <circle cx="-50" cy="700" r="280" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="70"/>
+  <rect x="240" y="80" width="120" height="120" rx="20" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="300" y="155" font-family="Arial, sans-serif" font-size="55" text-anchor="middle">📘</text>
+  <text x="300" y="250" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="bold" fill="#ffffff" text-anchor="middle">คู่มือเริ่มต้นใช้ AI</text>
+  <text x="300" y="290" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#a7f3d0" text-anchor="middle">สำหรับคนไทย</text>
+  <rect x="220" y="330" width="160" height="3" rx="2" fill="url(#accent)"/>
+  <text x="300" y="380" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">✦ ChatGPT · Claude · Gemini</text>
+  <text x="300" y="415" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">✦ เข้าใจง่าย · ภาษาไทย</text>
+  <text x="300" y="450" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">✦ ใช้ได้จริงทุกวัน</text>
+  <rect x="220" y="520" width="160" height="50" rx="25" fill="url(#accent)"/>
+  <text x="300" y="552" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#064e3b" text-anchor="middle">$4.99</text>
+  <text x="300" y="650" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#34d399" text-anchor="middle">thaitools.site</text>
+  <rect x="150" y="690" width="300" height="1" fill="#ffffff" opacity="0.1"/>
+</svg>
