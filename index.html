@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="รีวิว AI Tools เทคโนโลยี และของใช้ไอที สำหรับคนไทย รีวิวจริง ใช้จริง คัดมาให้แล้ว">
+    <meta name="keywords" content="AI Tools,รีวิว AI,เทคโนโลยี,ของใช้ไอที,รีวิวสินค้า,AI ภาษาไทย">
+    <meta name="author" content="thaitools.site">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ThaiTools - รีวิว AI Tools และเทคโนโลยี">
+    <meta property="og:description" content="รวมรีวิว AI Tools และของใช้ไอที คัดสรรมาให้คนไทยโดยเฉพาะ">
+    <meta property="og:url" content="https://cartoonasd00488-lab.github.io/thaitools/">
+    <meta property="og:type" content="website">
+    
+    <title>ThaiTools - รีวิว AI Tools และเทคโนโลยีสำหรับคนไทย</title>
+    
+    <style>
+        /* === RESET & BASE === */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --accent: #f59e0b;
+        }
+        
+        body {
+            font-family: 'Sarabun', 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* === NAV === */
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        nav .logo {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        nav .links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        nav .links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        
+        nav .links a:hover {
+            background: #f1f5f9;
+        }
+        
+        /* === HERO === */
+        .hero {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        
+        .hero p {
+            font-size: 1.1em;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 30px;
+        }
+        
+        /* === CATEGORIES === */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .category-card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .category-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .category-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .category-card p {
+            color: var(--text-muted);
+            font-size: 0.95em;
+        }
+        
+        .category-card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .category-card a:hover {
+            text-decoration: underline;
+        }
+        
+        /* === ARTICLE LIST === */
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary);
+            display: inline-block;
+        }
+        
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .article-card {
+            background: var(--card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .article-card .card-body {
+            padding: 25px;
+        }
+        
+        .article-card .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .article-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .article-card h3 a {
+            color: var(--text);
+            text-decoration: none;
+        }
+        
+        .article-card h3 a:hover {
+            color: var(--primary);
+        }
+        
+        .article-card p {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .article-card .read-more {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .article-card .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        /* === DIGITAL PRODUCTS === */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .product-card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .product-card .product-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .product-card h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .product-card p {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .product-card .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: #1e293b;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+        
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8em; }
+            header p { font-size: 1em; }
+            .hero h2 { font-size: 1.5em; }
+            nav .links { gap: 10px; }
+            nav .links a { font-size: 0.9em; }
+        }
+        
+        @media (max-width: 480px) {
+            header { padding: 40px 0 30px; }
+            .categories { grid-template-columns: 1fr; }
+            .articles { grid-template-columns: 1fr; }
+            .products-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Font loading fallback */
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🇹🇭 ThaiTools</h1>
+        <p>รีวิว AI Tools เทคโนโลยี และของใช้ไอที — คัดสรรมาเพื่อคนไทยโดยเฉพาะ</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="/thaitools/" class="logo">⚡ ThaiTools</a>
+        <div class="links">
+            <a href="/thaitools/">หน้าแรก</a>
+            <a href="/thaitools/blog/">บทความ</a>
+            <a href="/thaitools/products/">รีวิวสินค้า</a>
+            <a href="/thaitools/digital/">Digital Products</a>
+            <a href="/thaitools/about/">เกี่ยวกับ</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+    
+    <!-- Hero -->
+    <section class="hero">
+        <h2>AI กำลังเปลี่ยนโลก — คุณพร้อมหรือยัง?</h2>
+        <p>รวมรีวิว AI Tools ชั้นนำ เครื่องมือเพิ่ม productivity และของใช้ไอทีที่คุ้มค่าที่สุด คัดสรรมาให้คุณแล้ว</p>
+        <a href="/thaitools/blog/" class="btn">ดูบทความทั้งหมด →</a>
+    </section>
+
+    <!-- Categories -->
+    <h2 class="section-title">📂 หมวดหมู่</h2>
+    <div class="categories">
+        <div class="category-card">
+            <div class="icon">🤖</div>
+            <h3>รีวิว AI Tools</h3>
+            <p>รวมรีวิว ChatGPT, Claude, Gemini, Copilot, Midjourney และอื่นๆ ที่ใช้จริง</p>
+            <a href="/thaitools/blog/ai-tools/">ดูทั้งหมด →</a>
+        </div>
+        <div class="category-card">
+            <div class="icon">💻</div>
+            <h3>ของใช้ไอที</h3>
+            <p>รีวิวคีย์บอร์ด เมาส์ มอนิเตอร์ อุปกรณ์ streaming และ gadgets น่าใช้</p>
+            <a href="/thaitools/blog/gadgets/">ดูทั้งหมด →</a>
+        </div>
+        <div class="category-card">
+            <div class="icon">📖</div>
+            <h3>Digital Products</h3>
+            <p>E-book, Prompt Packs, Templates สำหรับคนใช้ AI ทำงาน</p>
+            <a href="/thaitools/digital/">ดูทั้งหมด →</a>
+        </div>
+        <div class="category-card">
+            <div class="icon">🎯</div>
+            <h3>Tips & Tricks</h3>
+            <p>วิธีใช้ AI ให้ทำงานได้เร็วขึ้น เทคนิคการเขียน Prompt และอื่นๆ</p>
+            <a href="/thaitools/blog/tips/">ดูทั้งหมด →</a>
+        </div>
+    </div>
+
+    <!-- Latest Articles -->
+    <h2 class="section-title">📝 บทความล่าสุด</h2>
+    <div class="articles" id="article-list">
+        <!-- Articles loaded via JavaScript -->
+        <p style="color: var(--text-muted); grid-column: 1/-1; text-align: center;">กำลังโหลดบทความ...</p>
+    </div>
+
+    <!-- Digital Products -->
+    <h2 class="section-title">📦 Digital Products</h2>
+    <div class="products-grid">
+        <div class="product-card">
+            <div class="product-icon">📜</div>
+            <h3>Prompt Pack สำหรับใช้ AI ทำงาน</h3>
+            <p>50+ Prompts สำเร็จรูป สำหรับ ChatGPT, Claude, Gemini คัดสรรทุกสายงาน</p>
+            <div class="price">฿199</div>
+            <a href="#" class="btn">ซื้อเลย</a>
+        </div>
+        <div class="product-card">
+            <div class="product-icon">📘</div>
+            <h3>คู่มือเริ่มต้นใช้ AI สำหรับคนไทย</h3>
+            <p>E-book สอนใช้ AI Tools ตั้งแต่เริ่มต้น จนใช้งานจริงในชีวิตประจำวัน</p>
+            <div class="price">฿99</div>
+            <a href="#" class="btn">ซื้อเลย</a>
+        </div>
+        <div class="product-card">
+            <div class="product-icon">📊</div>
+            <h3>Notion Template จัดการงานด้วย AI</h3>
+            <p>ระบบจัดการงานส่วนตัว + AI Assistant แบบ all-in-one สำหรับคนทำงาน</p>
+            <div class="price">฿149</div>
+            <a href="#" class="btn">ซื้อเลย</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 ThaiTools.site — รีวิว AI Tools และเทคโนโลยีสำหรับคนไทย</p>
+        <p style="margin-top: 5px; opacity: 0.6; font-size: 0.85em;">บางลิงก์ในเว็บไซต์เป็น Affiliate Link ซึ่งเราอาจได้รับค่าคอมมิชชั่นเล็กน้อย โดยไม่มีค่าใช้จ่ายเพิ่มเติมสำหรับคุณ</p>
+    </div>
+</footer>
+
+<script>
+    // Article data
+    const articles = [];
+
+    function loadArticles() {
+        const list = document.getElementById('article-list');
+        if (articles.length === 0) {
+            list.innerHTML = '<p style="color: var(--text-muted); grid-column: 1/-1; text-align: center; padding: 40px 0;">📝 กำลังเขียนบทความแรก เตรียมพบกับคอนเทนต์คุณภาพเร็วๆ นี้!</p>';
+        } else {
+            list.innerHTML = articles.map(a => `
+                <div class="article-card">
+                    <div class="card-body">
+                        <span class="tag">${a.tag}</span>
+                        <h3><a href="${a.url}">${a.title}</a></h3>
+                        <p>${a.excerpt}</p>
+                        <a href="${a.url}" class="read-more">อ่านต่อ →</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadArticles);
+</script>
+
+</body>
+</html>
