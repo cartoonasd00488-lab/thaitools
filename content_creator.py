@@ -48,8 +48,8 @@ def send_telegram(message):
 def write_article(title, content, category):
     """Write a new article HTML file"""
     slug = title.lower().replace(' ', '-').replace('?', '').replace('!', '')[:50]
-    filename = f'{category}/{slug}.html'
-    filepath = os.path.join(GITHUB_REPO, 'blog', filename)
+    filename = f'{slug}.html'
+    filepath = os.path.join(GITHUB_REPO, 'blog', category, filename)
     
     html_template = f'''<!DOCTYPE html>
 <html lang="th">
@@ -178,7 +178,7 @@ def main():
     success = git_push()
     if success:
         print("   ✅ อัปโหลดสำเร็จ!")
-        article_url = f"{SITE_URL}/blog/{category}/{filename.replace('.html','')}"
+        article_url = f"{SITE_URL}/blog/{category}/{filename}"
         msg = f"🤖 **AI Content Creator**\n📝 บทความใหม่: {title}\n🔗 {article_url}\n📦 Digital Products: {GUMROAD_PRODUCTS['prompt']}"
         send_telegram(msg)
     else:
